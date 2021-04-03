@@ -11,4 +11,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: firmware.bin
-        path: {{ steps.foo.outputs.binary }}
+        path: "${{ steps.foo.outputs.binary }}"
