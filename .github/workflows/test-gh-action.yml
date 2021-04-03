@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to test my action
+    steps:
+    - uses: actions/checkout@v2
+    - id: foo
+      uses: Transmitt0r/build-marlin-action@v1
