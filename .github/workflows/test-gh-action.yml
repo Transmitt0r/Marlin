@@ -3,8 +3,12 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to test my action
+    name: A job to test my action˚
     steps:
     - uses: actions/checkout@v2
     - id: foo
       uses: Transmitt0r/build-marlin-action@v1
+    - uses: actions/upload-artifact@v2
+      with:
+        name: firmware.bin
+        path: {{ steps.foo.outputs.binary }}
